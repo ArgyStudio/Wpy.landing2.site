@@ -49,7 +49,7 @@
 
 
   <script>
-    const PIXEL_ID = '4109663752650880';
+    const PIXEL_ID = '1217808549609242';
     !function(f,b,e,v,n,t,s){
       if(f.fbq) return; n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -242,7 +242,7 @@ window.addEventListener('load', async () => {
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ subdomain: 'memewb', fbc, fbp })
+      body: JSON.stringify({ subdomain: 'wbpy', fbc, fbp })
     }
   );
   if (!resp.ok) throw new Error(`LineManager error: ${resp.status}`);
@@ -253,12 +253,12 @@ const visitorId = await getVisitorId();
 const { allowTracking } = await verifyVisitor(visitorId);
 
 if (allowTracking) {
-  const SECONDARY_API = 'https://ty12v433pk.execute-api.us-east-2.amazonaws.com/prod/F1-MMWB';
+  const SECONDARY_API = 'https://2f0lvybe12.execute-api.us-east-2.amazonaws.com/prod/F1-WbPy';
   const EventPayload = {
     uuid,
     name,
     timestamp: new Date().toISOString(),
-    subdomain: 'memewb'
+    subdomain: 'wbpy'
   };
   fetch(SECONDARY_API, {
     method: 'POST',
